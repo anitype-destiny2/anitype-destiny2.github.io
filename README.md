@@ -1,0 +1,1 @@
+# anitype-destiny2.github.io
