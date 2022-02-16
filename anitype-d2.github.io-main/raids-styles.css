@@ -1,0 +1,343 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --graytext: rgb(199, 199, 199);
+  --redtext: rgb(194, 60, 60);
+  --orangetext: rgb(211, 147, 51);
+}
+
+body {
+  background-image: url("res/bg-dark.png");
+  background-color: rgb(24, 24, 24);
+  background-repeat: repeat;
+  margin: 0;
+  font-size: 12pt;
+}
+
+* {
+    font-family: 'Consolas', monospace;
+    color: var(--white);
+}
+
+.root {
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 0.0 Классы для навигации в верхней части страницы */
+
+.page-header-container {
+  width: 100%;
+  height: 2em;
+  display: grid;
+  background-color: #0003;
+}
+
+.page-header {
+  /* width: 40%;
+  min-width: 34em; */
+  display: grid;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: 6em 10em 10em 8em 12em 7em;
+  /* grid-column-gap: 2em; */
+}
+
+.header-item {
+  display: grid;
+  grid-template-columns: 1.2em auto;
+  grid-template-rows: 1.2em;
+  grid-column-gap: 0.5em;
+  opacity: 0.6;
+  transition: all 0.1s;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-item:hover {
+  opacity: 1;
+}
+
+.header-homeicon {
+  background-size: cover;
+  background-origin: border-box;
+  background-position: 50%;
+  border-radius: 0.5em;
+  border: 1px solid rgba(0,0,0,0.5);
+  box-shadow: inset 0 0 0 1px  rgba(255,255,255,0.05),
+              inset 0 -1px 0 0 rgba(255,255,255,0.1),
+                    0 0 1em 0  rgba(0,0,0,0.3);
+}
+
+.header-icon {
+  background-size: cover;
+  background-origin: border-box;
+  background-position: 50%;
+}
+
+.header-caption {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 0.7em;
+  user-select: none;
+  -moz-user-select: none;
+  
+}
+
+/* 1.0 Классы заголовка страницы */
+
+.page-title {
+  font-size: 16pt;
+
+  display: grid;
+  grid-template-rows: 2em 1.5em;
+  grid-template-columns: 3.5em 1fr;
+  grid-column-gap: 1.5em;
+
+  max-width: 25em;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-title-icon {
+  grid-row: 1 / span 2;
+  background-size: contain;
+  background-origin: border-box;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 3.5em;
+  height: 3.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-title-caption {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-shadow: 0 0 4px var(--black);
+  margin-top: auto;
+  margin-bottom: 0em;
+}
+
+.page-title-subcaption {
+  text-transform: uppercase;
+  color: var(--graytext);
+  font-size: 0.6em;
+  text-shadow: 0 0 4px var(--black);
+  margin-top: 0.2em;
+  margin-bottom: auto;
+}
+
+.page-title-description {
+  margin-top: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  width: 60%;
+  color: var(--graytext);
+  font-size: 0.8em;
+  text-shadow: 0 0 0.2em rgba(0,0,0,1), 0 0 0.5em rgba(0,0,0,1);
+}
+
+@media (orientation: portrait) {
+  .hideable {
+    display: none;
+  }
+  body {
+    font-size: 4vw;
+  }
+  .page-header {
+    grid-template-columns: 1fr;
+  }
+  .page-title {
+    font-size: 4vw;
+    grid-template-rows: 3.5em 2em 1.5em;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    max-width: 100500em;
+  }
+  .page-title-icon {
+    grid-row: 1 / span 1;
+  }
+  .page-title-caption, .page-title-subcaption {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .page-title-description {
+    width: 100%;
+  }
+}
+
+/* 2.0 Обобщённые классы для основного блока контента */
+
+.content-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 2em;
+}
+
+.content-category {
+  color: var(--orangetext);
+  text-transform: uppercase;
+  text-shadow: 0 0 4px var(--black);
+  margin-top: auto;
+  margin-bottom: 0.2em;
+}
+
+/* 2.1 Карты и схемы для этапов и испытаний */
+
+.maps-box {
+  display: grid;
+  grid-row-gap: 0.5em;
+  grid-column-gap: 0.5em;
+}
+
+.maps-category {
+  grid-column: 1 / span 2;
+}
+
+.maps-card {
+  position: relative;
+  background-size: cover;
+  background-origin: border-box;
+  background-position: 50%;
+  border-radius: 0.5em;
+  border: 1px solid rgba(0,0,0,0.5);
+  box-shadow: inset 0 0 0 1px  rgba(255,255,255,0.05),
+              inset 0 -1px 0 0 rgba(255,255,255,0.1),
+                    0 0 1em 0  rgba(0,0,0,0.3);
+  overflow: hidden;
+  transition: all 0.1s;
+  /* cursor:pointer; */
+}
+
+.maps-card:hover {
+  /* border: 1px solid rgba(128, 128, 128, 1); */
+  box-shadow: inset 0 0 0 1px  rgba(255,255,255,0.3),
+              inset 0 -1px 0 0 rgba(255,255,255,0.1),
+                    0 0 1em 0  rgba(0,0,0,0.3);
+}
+
+.maps-card-text {
+  font-size: 0.7em;
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  white-space: pre-wrap;
+  text-shadow: 0 0 0.2em rgba(0,0,0,1), 0 0 0.5em rgba(0,0,0,1);
+  user-select: none;
+  -moz-user-select: none;
+}
+
+/* 2.2 Список снаряжения */
+
+.equip-box {
+  display: grid;
+  grid-row-gap: 0.5em;
+  grid-column-gap: 0.5em;
+}
+
+.equip-header {
+  text-transform: uppercase;
+  color: var(--redtext);
+  text-shadow: 0 0 4px var(--black);
+  margin-top: auto;
+  margin-bottom: 0.2em;
+}
+
+.equip-item {
+  display: grid;
+  grid-template-columns: 50px auto;
+  grid-template-rows: 1fr 1fr auto;
+  grid-column-gap: 1em;
+}
+
+.equip-icon {
+  grid-row: 1 / span 2;
+  background-size: cover;
+  background-origin: border-box;
+  background-position: 50%;
+  border-radius: 0.5em;
+  border: 1px solid rgba(0,0,0,0.5);
+  box-shadow: inset 0 0 0 1px  rgba(255,255,255,0.05),
+              inset 0 -1px 0 0 rgba(255,255,255,0.1),
+                    0 0 1em 0  rgba(0,0,0,0.3);
+  overflow: hidden;
+  width: 48px;
+  height: 48px;
+  margin: auto;
+}
+
+.equip-caption {
+  text-transform: uppercase;
+  text-shadow: 0 0 4px var(--black);
+  margin-top: auto;
+}
+
+.equip-description {
+  font-size: 0.7em;
+  color: var(--graytext);
+  margin-top: 0.2em;
+  margin-bottom: auto;
+}
+
+
+@media (orientation: portrait) {
+  .content-box {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+  .maps-card-text {
+    font-size: 0.6em;
+  }
+  .equip-item {
+    grid-template-columns: 3em auto;
+  }
+  .equip-icon {
+    width: 3em;
+    height: 3em;
+  }
+}
+
+/* 2.XX Классы контента DSC */
+
+.maps-box-dsc {
+  grid-template-rows: 3em 10em 10em 3em 10em;
+  grid-template-columns: 1fr 1fr;
+}
+
+.equip-box-dsc {
+  grid-template-rows: 3em 2em auto 2em auto 2em auto 2em auto auto auto auto auto;
+  grid-template-columns: 1fr;
+}
+
+@media (orientation: landscape) and (min-width: 1300px) {
+  .header-caption {
+    font-size: 0.8em;
+  }
+  .root {
+    font-size: 2vh;
+  }
+  .maps-box-dsc {
+    grid-template-rows: 3em 15em 15em 3em 15em;
+  }
+  .maps-card-text {
+    font-size: 0.8em;
+  }
+  .equip-item {
+    grid-template-columns: 74px auto;
+  }
+  .equip-icon {
+    width: 72px;
+    height: 72px;
+  }
+}
