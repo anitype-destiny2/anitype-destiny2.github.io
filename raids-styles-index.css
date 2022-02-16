@@ -102,6 +102,6 @@
 
 @media (orientation: landscape) and (min-width: 1300px) {
   .cards-box {
-    height: 36em;
+    height: 100%;
   }
 }
