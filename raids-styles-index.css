@@ -68,7 +68,7 @@
   grid-row-gap: 1em;
   grid-column-gap: 1em;
   width: 70%;
-  height: 100%;
+  height: 31em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -102,6 +102,6 @@
 
 @media (orientation: landscape) and (min-width: 1300px) {
   .cards-box {
-    height: 100%;
+    height: 36em;
   }
 }
