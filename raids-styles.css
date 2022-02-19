@@ -187,7 +187,6 @@ body {
 .content-box-vog {
   position: relative;
   display: grid;
-  grid-template-rows: 4em auto 4em auto 4em auto 4em auto 6em auto;
 }
 .content-category {
   color: var(--orangetext);
