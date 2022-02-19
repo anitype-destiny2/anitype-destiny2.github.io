@@ -310,10 +310,6 @@ body {
     width: 3em;
     height: 3em;
   }
-  .content-box-vog {
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-  }
 }
 
 /* 2.XX Классы контента DSC */
