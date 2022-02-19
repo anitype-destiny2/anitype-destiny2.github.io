@@ -204,6 +204,16 @@ body {
   width: 30em;
   height: 16em;
 }
+.vog-img-text {
+  font-size: 0.7em;
+  position: absolute;
+  bottom: 1em;
+  left: auto;
+  white-space: pre-wrap;
+  text-shadow: 0 0 0.2em rgba(0,0,0,1), 0 0 0.5em rgba(0,0,0,1);
+  user-select: none;
+  -moz-user-select: none;
+}
 .content-category {
   color: var(--orangetext);
   text-transform: uppercase;
