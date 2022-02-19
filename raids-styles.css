@@ -206,11 +206,10 @@ body {
   height: 18.5em;
 }
 .vog-img-text {
-  background-image: linear-gradient(to bottom, #FFFFFF, #333333);
   margin-left: 5px;
   margin-bottom: 5px;
   text-decoration: underline;
-  font-size: 0.7em;
+  font-size: 0.9em;
   position: absolute;
   bottom: 1em;
   left: auto;
