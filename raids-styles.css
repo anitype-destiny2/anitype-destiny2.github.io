@@ -205,6 +205,7 @@ body {
   height: 16em;
 }
 .vog-img-text {
+  text-decoration: underline;
   font-size: 0.7em;
   position: absolute;
   bottom: 1em;
